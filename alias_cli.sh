@@ -17,31 +17,34 @@ function al() {
     elif [[ $# -eq 1 ]]; then
         grep "$1" "$ALIAS_COMMANDS_FILE" | sed 's/^alias //g'
     elif [[ $1 == "-v" ]]; then
-        command=$(grep "alias $2=" "$ALIAS_COMMANDS_FILE" | sed "s/alias $2='\(.*\)'$/\1/")
-        if [[ -n $command ]]; then
-            echo "$2 -> $command"
+        ALIAS_COMMAND=$(grep "alias $2=" "$ALIAS_COMMANDS_FILE" | sed "s/alias $2='\(.*\)'$/\1/")
+        if [[ -n $ALIAS_COMMAND ]]; then
+            echo "$ALIAS_COMMAND"
         else
-            echo "No command found for alias: \"$2\""
+            echo "No command found for alias: $2"
         fi
     elif [[ $1 =~ ^-[Dd]$ ]]; then
         if [[ $# -lt 2 ]]; then
             echo "Please specify an alias to delete"
             return 1
         fi
-        echo "Delete alias '$2'? [y/n]" && read
+        DELETED_COMMAND=$(grep "alias $2=" "$ALIAS_COMMANDS_FILE" | sed "s/alias $2='\(.*\)'$/\1/")
+        echo "Delete '$DELETED_COMMAND'? (y/N)"
+        read
         if [[ $REPLY =~ ^[Yy]$ ]]; then
             sed -i.bak "/^alias $2=.*/d" "$ALIAS_COMMANDS_FILE"
-            echo "Deleted alias $2"
+            echo "Deleted $2"
         fi
     elif [[ $# -eq 2 ]]; then
         if grep "^alias $1=" "$ALIAS_COMMANDS_FILE"; then
-            existing_command=$(grep "^alias $1=" "$ALIAS_COMMANDS_FILE" | sed "s/^alias $1='\(.*\)'$/\1/")
-            echo "Alias \"$1\" already exists: \"$existing_command\""
-            echo "Update to \"$2\"? (y/n) "
+            EXISTING_COMMAND=$(grep "^alias $1=" "$ALIAS_COMMANDS_FILE" | sed "s/^alias $1='\(.*\)'$/\1/")
+            echo "\"$1\" already exists"
+            echo "Update to \"$2\"? (y/N) "
             read
             if [[ $REPLY =~ ^[Yy]$ ]]; then
                 sed -i.bak "/^alias $1=\"/d" "$ALIAS_COMMANDS_FILE"
                 echo "alias $1=\"$2\"" >> "$ALIAS_COMMANDS_FILE"
+                echo "Updated $1 -> \"$2\""
             fi
         else
             echo "alias $1=\"$2\"" >> "$ALIAS_COMMANDS_FILE"
@@ -50,4 +53,6 @@ function al() {
         echo "Invalid arguments"
         return 1
     fi
+
+    source "$ALIAS_COMMANDS_FILE"
 }

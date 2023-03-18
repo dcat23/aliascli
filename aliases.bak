@@ -46,4 +46,4 @@ alias aws-id="aws sts get-caller-identity --query Account --output text"
 alias gcloud="~/Downloads/installers/google-cloud-sdk/bin/gcloud"
 # alias am="aws-vault exec cyborg -- aws"
 
-alias maker="something different"
+alias glg="git log -v"

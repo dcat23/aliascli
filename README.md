@@ -1,16 +1,16 @@
-# AliasCLI
+# Alias CLI
 
 ## **Usage**
 
-To use AliasCLI, you need to have the `alias_cli.sh` script and the `aliases` file in the same directory.
+To use Alias CLI, you need to have the `alias_cli.sh` script and the `alias_commands` file in the same directory.
 
-The `aliases` file contains the list of aliases that you want to manage with AliasCLI. Each alias should be defined as follows:
+The `alias_commands` file contains the list of aliases that you want to manage with AliasCLI. Each alias should be defined as follows:
 
 ```bash
 alias alias_name='command'
 ```
 
-To manage aliases with AliasCLI, simply run the `al` command followed by the appropriate arguments.
+To manage aliases with Alias CLI, simply run the `al` command followed by the appropriate arguments.
 
 ```bash
 al [-h] [<alias> <command>] [-v <alias>] [-d <alias>]
@@ -32,8 +32,9 @@ For example, to create a new alias called "cm" that runs the "git commit -md" co
 ```bash
 al cm "git commit -m"
 ```
+> NOTE: Be sure to include quotations around the command 
 
-To view the command associated with the "g" alias, you would run:
+To view the command associated with the "cm" alias, you would run:
 
 ```bash
 al -v cm
@@ -67,8 +68,14 @@ Replace `/path/to/AliasCLI/` with the actual path to the AliasCLI folder on your
 
 Once you've added this line to your shell configuration file, the `al` function will be loaded automatically every time you open a new terminal window.
 
-To make the `al` function available in each new terminal from any directory, you can add `source /path/to/alias_cli.sh` command to your shell configuration file (~/.bashrc for Bash or ~/.zshrc for Zsh):
+To make the `al` function available in each new terminal from any directory, you can add `source "$HOME/AliasCLI/alias_cli.sh"` command to your shell configuration file (~/.bashrc for Bash or ~/.zshrc for Zsh):
+
+## Temporary Shell Variables
+- `echo $ALIAS_COMMANDS_FILE`: location of aliases
+- `echo $EXISTING_COMMAND`: most recently updated alias
+- `echo $DELETED_COMMAND`: most recently deleted alias
+- `./alias_commands.bak`: backup before recent changes
 
 ## **License**
 
-AliasCLI is licensed under the [**MIT License**](https://opensource.org/license/mit).
+Alias CLI is licensed under the [**MIT License**](https://opensource.org/license/mit).

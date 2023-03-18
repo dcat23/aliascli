@@ -1,10 +1,11 @@
 # ALIAS COMMANDS
 
-# system
+# cd
 alias hh="cd ~/"
 alias des="cd ~/Desktop/"
 alias doc="cd ~/Documents/"
 alias dow="cd ~/Downloads/"
+
 
 # git 
 alias cl="git clone"
@@ -31,6 +32,9 @@ alias ns="npm run start"
 
 # python
 alias py="python3"
+
+# system
+alias ee="logout"
 
 # yarn
 alias ya="yarn add"

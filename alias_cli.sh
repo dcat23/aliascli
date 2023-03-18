@@ -1,4 +1,4 @@
-export ALIAS_COMMANDS_FILE="$HOME/AliasCLI/alias_commands"
+export ALIAS_COMMANDS_FILE="$HOME/aliascli/alias_commands"
 source "$ALIAS_COMMANDS_FILE"                                                                                          
 
 function al() {

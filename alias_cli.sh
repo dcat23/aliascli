@@ -1,9 +1,10 @@
-export ALIAS_COMMANDS_FILE="$HOME/AliasCLI/aliases"
+export ALIAS_COMMANDS_FILE="$HOME/AliasCLI/alias_commands"
 source "$ALIAS_COMMANDS_FILE"                                                                                          
 
 function al() {
     if [[ $1 == "-h" ]]; then
         echo "al -h                : show this help page"
+        echo "al -o                : opens the alias commands file"
         echo "al                   : list all aliases"
         echo "al <string>          : list aliases containing <string>"
         echo "al -d <string>       : delete aliases containing <string>"

@@ -1,0 +1,41 @@
+# ALIAS COMMANDS
+
+# system
+alias hh="cd ~/"
+alias des="cd ~/Desktop/"
+alias doc="cd ~/Documents/"
+alias dow="cd ~/Downloads/"
+
+# git 
+alias cl="git clone"
+alias st="git status"
+alias br="git branch -v"
+alias ck="git checkout"
+alias br="git branch -v"
+alias am="git commit -am"
+alias cm="git commit -m"
+alias gr="git remote -v"
+alias ga="git add"
+alias lg="git log"
+alias dff="git diff"
+alias psh="git push"
+alias pll="git pull"
+
+# npm
+alias ni="npm install"
+alias nt="npm test"
+alias nd="npm run dev"
+alias ns="npm run start"
+
+# npx 
+
+# python
+alias py="python3"
+
+# yarn
+alias ya="yarn add"
+alias yb="yarn build"
+alias yd="yarn dev"
+alias ys="yarn start"
+alias yt="yarn test"
+

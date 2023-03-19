@@ -1,4 +1,7 @@
+#!/usr/bin/env bash
+
 export ALIAS_COMMANDS_FILE="$HOME/aliascli/alias_commands"
+export ALIAS_CLI_FILE="$HOME/aliascli/alias_cli"
 source "$ALIAS_COMMANDS_FILE"                                                                                          
 
 function al() {
@@ -24,6 +27,8 @@ function al() {
         else
             echo "No command found for alias: $2"
         fi
+    elif [[ $1 == "-o" ]]; then
+        open "$ALIAS_CLI_FILE"
     elif [[ $1 =~ ^-[Dd]$ ]]; then
         if [[ $# -lt 2 ]]; then
             echo "Please specify an alias to delete"

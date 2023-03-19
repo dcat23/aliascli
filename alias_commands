@@ -1,11 +1,13 @@
 # ALIAS COMMANDS
 
+# docker
+alias dk="docker"
+
 # cd
 alias hh="cd ~/"
 alias des="cd ~/Desktop/"
 alias doc="cd ~/Documents/"
 alias dow="cd ~/Downloads/"
-
 
 # git 
 alias cl="git clone"

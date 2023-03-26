@@ -25,25 +25,27 @@ alias psh="git push"
 alias pll="git pull"
 
 # npm
-# alias ni="npm install"
-# alias nt="npm test"
-# alias nd="npm run dev"
-# alias ns="npm run start"
+alias ni="npm install"
+alias nt="npm test"
+alias nd="npm run dev"
+alias ns="npm run start"
 
 # npx 
 
 # python
-# alias py="python3"
+alias py="python3"
 
 # system
 alias ee="logout"
 
 # yarn
-# alias ya="yarn add"
-# alias yb="yarn build"
-# alias yd="yarn dev"
-# alias ys="yarn start"
-# alias yt="yarn test"
+alias ya="yarn add"
+alias yb="yarn build"
+alias yd="yarn dev"
+alias ys="yarn start"
+alias yt="yarn test"
+
+alias la="ls -la"
 
 alias xstop="sudo systemctl stop xrdp"
 alias xstar="sudo systemctl start xrdp"

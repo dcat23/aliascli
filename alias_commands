@@ -47,7 +47,7 @@ alias yt="yarn test"
 
 alias la="ls -la"
 
-alias storm="mate-terminal -x .storm-launcher/java-other/bin/java -Xmx512m -Xss2m -XX:+DisableAttachMechanism -jar storm-launcher/Storm-Launcher-2.1.0.jar"
+alias storm="storm-launcher/java-other/bin/java -Xmx512m -Xss2m -XX:+DisableAttachMechanism -jar storm-launcher/Storm-Launcher-2.1.0.jar"
 
 alias xstop="sudo systemctl stop xrdp"
 alias xstar="sudo systemctl start xrdp"

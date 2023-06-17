@@ -5,9 +5,6 @@ alias dk="docker"
 
 # cd
 alias hh="cd ~/"
-# alias des="cd ~/Desktop/"
-# alias doc="cd ~/Documents/"
-# alias dow="cd ~/Downloads/"
 
 # git 
 alias cl="git clone"
@@ -24,30 +21,11 @@ alias dff="git diff"
 alias psh="git push"
 alias pll="git pull"
 
-# npm
-alias ni="npm install"
-alias nt="npm test"
-alias nd="npm run dev"
-alias ns="npm run start"
-
-# npx 
-
-# python
-alias py="python3"
-
 # system
 alias ee="logout"
-
-# yarn
-alias ya="yarn add"
-alias yb="yarn build"
-alias yd="yarn dev"
-alias ys="yarn start"
-alias yt="yarn test"
-
 alias la="ls -la"
 
-alias storm="storm-launcher/java-other/bin/java -Xmx512m -Xss2m -XX:+DisableAttachMechanism -jar storm-launcher/Storm-Launcher-2.1.0.jar"
+alias storm="~/java/bin/java -Xmx512m -Xss2m -XX:+DisableAttachMechanism -jar ~/Storm-Launcher-*.jar"
 
 alias xstop="sudo systemctl stop xrdp"
 alias xstar="sudo systemctl start xrdp"

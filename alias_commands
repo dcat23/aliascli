@@ -22,8 +22,9 @@ alias psh="git push"
 alias pll="git pull"
 
 # system
-alias ee="logout"
+alias ee="exit"
 alias la="ls -la"
+alias c="clear"
 
 alias storm="~/java/bin/java -Xmx512m -Xss2m -XX:+DisableAttachMechanism -jar ~/Storm-Launcher-*.jar"
 

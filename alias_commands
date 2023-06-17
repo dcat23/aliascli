@@ -26,7 +26,7 @@ alias ee="exit"
 alias la="ls -la"
 alias c="clear"
 
-alias storm="~/java/bin/java -Xmx512m -Xss2m -XX:+DisableAttachMechanism -jar ~/Storm-Launcher-*.jar"
+alias storm="~/java/bin/java -jar ~/Storm-Launcher-*.jar"
 
 alias xstop="sudo systemctl stop xrdp"
 alias xstar="sudo systemctl start xrdp"

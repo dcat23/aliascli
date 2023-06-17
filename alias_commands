@@ -30,3 +30,5 @@ alias storm="~/java/bin/java -Xmx512m -Xss2m -XX:+DisableAttachMechanism -jar ~/
 alias xstop="sudo systemctl stop xrdp"
 alias xstar="sudo systemctl start xrdp"
 alias mt="mate-terminal"
+
+alias zz="cd ~/.openosrs && zip oprs.zip settings.properties profiles2 && aws s3 cp oprs.zip s3://bot-client-614937 && cd ~/"

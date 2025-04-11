@@ -6,7 +6,18 @@ set -e
 # Variables
 REPO_URL="https://github.com/dcat23/aliascli.git"
 INSTALL_DIR="$HOME/.aliascli"
-SHELL_CONFIG_FILE="$HOME/.bashrc" # Change to ~/.zshrc if using Zsh
+
+# Detect the shell and set SHELL_CONFIG_FILE
+if [[ "$SHELL" == *"zsh"* ]]; then
+    SHELL_CONFIG_FILE="$HOME/.zshrc"
+elif [[ "$SHELL" == *"bash"* ]]; then
+    SHELL_CONFIG_FILE="$HOME/.bashrc"
+else
+    echo "Unsupported shell: $SHELL"
+    exit 1
+fi
+
+# SHELL_CONFIG_FILE="$HOME/.bashrc" # Change to ~/.zshrc if using Zsh
 
 # Step 1: Clone the repository
 echo "Cloning Alias CLI repository..."

@@ -1,5 +1,17 @@
 # Alias CLI
 
+## **Installation**
+
+Using `curl`
+```bash
+bash <(curl -s https://raw.githubusercontent.com/dcat23/aliascli/main/install.sh)
+```
+
+Using `wget`
+```bash
+bash <(wget -qO- https://raw.githubusercontent.com/dcat23/aliascli/main/install.sh)
+```
+
 ## **Usage**
 
 To use Alias CLI, you need to have the `alias_cli` script and the `alias_commands` file in the same directory.

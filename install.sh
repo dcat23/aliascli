@@ -5,7 +5,7 @@ set -e
 
 # Variables
 REPO_URL="https://github.com/dcat23/aliascli.git"
-INSTALL_DIR="$HOME/.aliascli"
+INSTALL_DIR="$HOME/aliascli"
 
 # Detect the shell and set SHELL_CONFIG_FILE
 if [[ "$SHELL" == *"zsh"* ]]; then

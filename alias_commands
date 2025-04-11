@@ -32,11 +32,20 @@ alias ns="npm run start"
 
 # npx 
 
+# nx
+alias nx-init="npx nx@19.6.2 init"
+
+# pnpm
+alias pa="pnpm add"
+alias pi="pnpm install"
+alias pd="pnpm dev"
+
 # python
 alias py="python3"
 
 # system
 alias ee="logout"
+alias k="clear"
 
 # yarn
 alias ya="yarn add"

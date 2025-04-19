@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-export ALIAS_COMMANDS_FILE="$HOME/aliascli/alias_commands"
-export ALIAS_CLI_FILE="$HOME/aliascli/alias_cli"
+export ALIAS_COMMANDS_FILE="$ALIAS_CLI_DIR/alias_commands"
+export ALIAS_CLI_FILE="$ALIAS_CLI_DIR/alias_cli"
 source "$ALIAS_COMMANDS_FILE"                                                                                          
 
 function al() {

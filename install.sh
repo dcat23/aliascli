@@ -5,7 +5,7 @@ set -e
 
 # Variables
 REPO_URL="https://github.com/dcat23/aliascli.git"
-INSTALL_DIR="$HOME/aliascli"
+INSTALL_DIR="$HOME/.aliascli"
 
 # Detect the shell and set SHELL_CONFIG_FILE
 if [[ "$SHELL" == *"zsh"* ]]; then
@@ -34,6 +34,7 @@ chmod +x "$INSTALL_DIR/alias_cli"
 # Step 3: Add alias_cli to shell configuration for persistent access
 echo "Adding alias_cli to shell configuration file ($SHELL_CONFIG_FILE)..."
 if ! grep -q "source $INSTALL_DIR/alias_cli" "$SHELL_CONFIG_FILE"; then
+    echo "export ALIAS_CLI_DIR=\"$INSTALL_DIR\"" >> "$SHELL_CONFIG_FILE" 
     echo "source \"$INSTALL_DIR/alias_cli\"" >> "$SHELL_CONFIG_FILE"
     echo "Alias CLI added successfully."
 else

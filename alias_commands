@@ -2,6 +2,8 @@
 
 # docker
 alias dk="docker"
+alias dku="docker compose up -d"
+alias dkd="docker compose down"
 
 # cd
 alias hh="cd ~/"
@@ -12,7 +14,6 @@ alias dow="cd ~/Downloads/"
 # git 
 alias cl="git clone"
 alias st="git status"
-alias br="git branch -v"
 alias ck="git checkout"
 alias br="git branch -v"
 alias am="git commit -am"
@@ -23,10 +24,11 @@ alias lg="git log"
 alias dff="git diff"
 alias psh="git push"
 alias pll="git pull"
+alias ckb="git checkout -b"
+alias gm="git merge"
 
 # npm
 alias ni="npm install"
-alias nt="npm test"
 alias nd="npm run dev"
 alias ns="npm run start"
 
@@ -34,18 +36,40 @@ alias ns="npm run start"
 
 # nx
 alias nx-init="npx nx@19.6.2 init"
+alias nxr="pnpm exec nx reset"
+alias nx="pnpm exec nx"
+alias nxb="pnpm exec nx run-many --targets build"
+alias nxv="pnpm dlx nx release version"
+alias nxp="pnpm exec nx release publish --tag latest"
+alias nxlr="pnpm exec nx local-registry"
+alias nxs="pnpm exec nx serve"
+
+# next-feature
+alias feature="pnpm exec nx generate next-feature:feature"
+alias comp="pnpm exec nx generate next-feature:component"
+alias axios="pnpm exec nx generate next-feature:axios"
+alias types="pnpm exec nx generate next-feature:data-type"
+alias util="pnpm exec nx generate next-feature:utility"
+alias api="pnpm exec nx generate next-feature:action"
+alias const="pnpm exec nx generate next-feature:constant"
+alias nxanf="pnpm dlx nx add next-feature"
+alias application="pnpm exec nx generate next-feature:application"
+
+alias create-secret-key='node -e "console.log(require(\"crypto\").randomBytes(32).toString(\"hex\"))"'
 
 # pnpm
 alias pa="pnpm add"
 alias pi="pnpm install"
 alias pd="pnpm dev"
+alias pe="pnpm exec"
 
 # python
 alias py="python3"
 
 # system
-alias ee="logout"
 alias k="clear"
+alias ee="exit"
+alias sz="du -sch .[^.]* * | sort -h"
 
 # yarn
 alias ya="yarn add"
@@ -54,3 +78,5 @@ alias yd="yarn dev"
 alias ys="yarn start"
 alias yt="yarn test"
 
+alias reset-jetbrains-trial="$HOME/jetbrains-reset-trial/linux/runme.sh"alias sbr="set -a; source .env; set +a; ./mvnw spring-boot:run"
+alias gcloud="gcloud.cmd"

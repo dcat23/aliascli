@@ -69,6 +69,7 @@ alias py="python3"
 # system
 alias k="clear"
 alias ee="exit"
+alias la="ls -la"
 alias sz="du -sch .[^.]* * | sort -h"
 
 # yarn
@@ -78,5 +79,6 @@ alias yd="yarn dev"
 alias ys="yarn start"
 alias yt="yarn test"
 
-alias reset-jetbrains-trial="$HOME/jetbrains-reset-trial/linux/runme.sh"alias sbr="set -a; source .env; set +a; ./mvnw spring-boot:run"
+alias reset-jetbrains-trial="$HOME/jetbrains-reset-trial/linux/runme.sh"
+alias sbr="set -a; source .env; set +a; ./mvnw spring-boot:run"
 alias gcloud="gcloud.cmd"

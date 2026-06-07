@@ -35,7 +35,6 @@ alias ns="npm run start"
 # npx 
 
 # nx
-alias nx-init="npx nx@19.6.2 init"
 alias nxr="pnpm exec nx reset"
 alias nx="pnpm exec nx"
 alias nxb="pnpm exec nx run-many --targets build"
@@ -80,5 +79,3 @@ alias ys="yarn start"
 alias yt="yarn test"
 
 alias reset-jetbrains-trial="$HOME/jetbrains-reset-trial/linux/runme.sh"
-alias sbr="set -a; source .env; set +a; ./mvnw spring-boot:run"
-alias gcloud="gcloud.cmd"
